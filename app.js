@@ -6,6 +6,9 @@ import path, { dirname } from 'path';
 import cors from 'cors';
 import globalError from './middleware/errorMiddleware.js';
 import ApiError from './utils/apiError.js';
+import limiter from './middleware/rateLimitMiddleware.js';
+import docsOptions from './docs/swagger.js';
+import swaggerUi from 'swagger-ui-express';
 
 dotenv.config();
 
@@ -21,7 +24,11 @@ app.options('*', cors());
 app.use(express.json({ limit: '20kb' }));
 app.use(express.urlencoded({ extended: true }));
 app.use(express.static(dirname('uploads')));
+app.use(limiter);
 
+// Swagger 
+app.use('/api-doc', swaggerUi.serve, swaggerUi.setup(docsOptions));
+// Routes 
 app.use('/api/v1', routes);
 
 app.all('*', (req, res, next) => {

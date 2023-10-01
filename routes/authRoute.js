@@ -16,10 +16,15 @@ import {
 
 const router = express.Router();
 
-router.route('/login').post(loginValidator, login);
-router.route('/register').post(registerValidator, register);
-router.route('/forgetPassword').post(forgetPasswordValidator, forgetPassword);
-router.route('/verifyCode').post(verifyCodeValidator, verifyResetPassCode);
-router.route('/resetPassword').post(resetPasswordValidator, resetPassword);
+/**
+ * @swagger    login
+ *  /
+ *  get
+ */
+router.post('/login', loginValidator, login);
+router.post('/register', registerValidator, register);
+router.post('/forgetPassword', forgetPasswordValidator, forgetPassword);
+router.post('/verifyCode', verifyCodeValidator, verifyResetPassCode);
+router.post('/resetPassword', resetPasswordValidator, resetPassword);
 
 export default router;

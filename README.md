@@ -80,11 +80,6 @@ Check [Ecommerce API Documentation](https://documenter.getpostman.com/view/22369
   * Get All Brands [Public]
   * Update Brand [Admin]
   * Delete Brand [Admin]
-* Brands Service
-  * Create New Brand [Admin]
-  * Get All Brands [Public]
-  * Update Brand [Admin]
-  * Delete Brand [Admin]
 * Products Service
   * Create New Product [Admin]
   * Get All Products [Public]
@@ -101,7 +96,7 @@ Check [Ecommerce API Documentation](https://documenter.getpostman.com/view/22369
   * Add Product to wishlist List [User]
   * Remove Product From wishlist List [User]
 * Coupon Services
-  * Create New Coupon [User]
+  * Create New Coupon [Admin]
   * Get Coupons [Admin]
   * Get Coupon  [User]
   * Update Coupon [Admin]
@@ -124,6 +119,16 @@ Check [Ecommerce API Documentation](https://documenter.getpostman.com/view/22369
   * Pay By Stripe [User]
 
 
+
+## Built With
+
+List of any major frameworks used to build the project.
+
+* [NodeJS](https://nodejs.org/) - JS runtime environment
+* [ExpressJS](https://expressjs.com/) - The NodeJS framework used
+* [MongoDB](https://www.mongodb.com/) - NoSQL Database uses JSON-like documents with optional schemas
+* [Mongoose](https://mongoosejs.com/) - Object Data Modeling (ODM) library for MongoDB and NodeJS
+* [Cors](https://www.npmjs.com/package/cors) - NodeJS package for providing a Connect/Express middleware that can be 
 
 <!-- CONTACT -->
 ## Contact
